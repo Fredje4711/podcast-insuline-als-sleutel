@@ -7,14 +7,14 @@
     <title>Podcast: Uitleg bij 'Insuline als Sleutel' - Diabetes Liga Midden-Limburg</title>
 
     <style>
-        /* --- Basis CSS (grotendeels ongewijzigd) --- */
+        /* --- Basis CSS --- */
         body {
             margin: 0; padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             background-color: #f8f9fa; color: #212529; line-height: 1.6;
         }
         .container {
-            max-width: 800px; margin: 20px auto; padding: 15px 20px 30px 20px; /* Meer padding onderaan voor footer */
+            max-width: 800px; margin: 20px auto; padding: 15px 20px 30px 20px;
             background-color: #ffffff; border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
@@ -31,41 +31,40 @@
         a { color: #0056b3; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* --- NIEUWE CSS VOOR DE CUSTOM FOOTER --- */
+        /* --- NIEUW: Styling voor de video thumbnail --- */
+        .video-thumbnail {
+            display: block; /* Om margin auto te laten werken */
+            max-width: 80%;  /* Maak het niet te breed, bv. 80% van container */
+            height: auto; /* Behoud aspect ratio */
+            margin: 20px auto 25px auto; /* Marge: Boven, L/R auto (center), Onder */
+            border-radius: 6px; /* Optioneel: lichte afronding */
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1); /* Optioneel: subtiele schaduw */
+        }
+        /* --- EINDE THUMBNAIL CSS --- */
+
+
+        /* --- CSS VOOR DE CUSTOM FOOTER --- */
         footer {
-            border-top: 1px solid #e0e0e0; /* Lijn boven de footer */
-            padding-top: 20px; /* Ruimte boven de footer-inhoud */
-            margin-top: 30px; /* Ruimte boven de lijn */
-            text-align: center; /* Centreer de tekst in de footer */
-            font-size: 0.9em;
-            color: #6c757d; /* Grijze kleur */
+            border-top: 1px solid #e0e0e0; padding-top: 20px; margin-top: 30px;
+            text-align: center; font-size: 0.9em; color: #6c757d;
         }
-        footer p { /* Styling voor paragrafen binnen de footer */
-            margin-bottom: 10px; /* Iets minder ruimte tussen footer paragrafen */
-        }
+        footer p { margin-bottom: 10px; }
         .social-links a {
-            display: inline-block; /* Zorgt dat links naast elkaar kunnen met marge */
-            margin: 5px 10px; /* Ruimte rondom elke social link */
-            color: #495057; /* Iets donkerdere kleur voor links */
-            text-decoration: none; /* Geen onderstreping */
-            vertical-align: middle; /* Lijn icon en tekst verticaal uit */
+            display: inline-block; margin: 5px 10px; color: #495057;
+            text-decoration: none; vertical-align: middle;
         }
-        .social-links a:hover {
-            color: #0056b3; /* Kleur bij hover */
-            text-decoration: none; /* Geen onderstreping bij hover */
-        }
+        .social-links a:hover { color: #0056b3; text-decoration: none; }
         .social-icon {
-            height: 20px; /* Hoogte van de iconen */
-            width: auto; /* Breedte automatisch aanpassen */
-            margin-right: 5px; /* Ruimte tussen icoon en tekst */
-            vertical-align: middle; /* Lijn iconen verticaal uit met tekst */
+            height: 20px; width: auto; margin-right: 5px; vertical-align: middle;
         }
         /* --- EINDE FOOTER CSS --- */
 
          @media (max-width: 480px) {
-            .container { margin: 10px; padding: 10px 15px 20px 15px; } /* Padding aangepast */
+            .container { margin: 10px; padding: 10px 15px 20px 15px; }
             h1 { font-size: 1.5em; }
-            .social-links a { margin: 5px; } /* Iets minder marge op kleine schermen */
+            .social-links a { margin: 5px; }
+            /* Optioneel: Thumbnail iets kleiner op mobiel indien nodig */
+            .video-thumbnail { max-width: 95%; margin-top: 15px; margin-bottom: 20px;}
          }
     </style>
 </head>
@@ -75,14 +74,22 @@
 
         <h1>Podcast: Bespreking van de video '100 jaar Insuline: Insuline als de sleutel'</h1>
 
+        <!-- *** HIER DE THUMBNAIL TOEGEVOEGD *** -->
+        <!-- BELANGRIJK: Upload 'Thumbnail Insuline als de sleutel.png' naar GitHub! -->
+        <img src="Thumbnail Insuline als de sleutel.png"
+             alt="Thumbnail van de YouTube video '100 jaar Insuline: Insuline als de sleutel'"
+             class="video-thumbnail">
+        <!-- *** EINDE THUMBNAIL *** -->
+
         <p>
             Welkom! In deze podcast hoort u een samenvattende bespreking in het Nederlands van de video
+            <!-- Let op: De link hieronder moet nog ingevuld worden -->
             <a href="[LINK_NAAR_YOUTUBE_VIDEO]" target="_blank" rel="noopener noreferrer">"100 jaar Insuline: Insuline als de sleutel"</a>.
             De originele video is gemaakt door <strong>Eddy Foulon</strong> van de <strong>Diabetes Liga Midden-Limburg</strong>.
-            <!-- Vul hier de link naar de YouTube video in -->
         </p>
 
         <!-- De HTML5 Audio Player -->
+        <!-- Controleer of de bestandsnaam EXACt klopt (hoofdletters/spaties) -->
         <audio controls src="PodCast over de video_Insuline als de sleutel .wav">
             Uw browser ondersteunt het audio-element niet.
             Probeer het bestand te downloaden:
@@ -92,36 +99,25 @@
         <h2>Meer informatie</h2>
         <p>
             De besproken video is een initiatief van de Diabetes Liga Midden-Limburg. Voor meer informatie over de video of de liga <a href="https://www.dlml.be" target="_blank" rel="noopener noreferrer">DLML</a>,
-            <!-- VOEG HIER DE LINK NAAR DE WEBSITE TOE INDIEN BESCHIKBAAR -->
-            <!-- bezoek hun <a href="[LINK_NAAR_WEBSITE_DIABETESLIGA]" target="_blank" rel="noopener noreferrer">website</a> of -->
-            bekijk de originele video en meer op hun <a href="https://www.youtube.com/@Diabetesligamiddenlimburg/xregexp" target="_blank" rel="noopener noreferrer">YouTube-kanaal</a>.
-             <!-- Vul hier de link naar het YouTube kanaal in -->
+            bekijk de originele video en meer op hun <a href="https://www.youtube.com/@Diabetesligamiddenlimburg" target="_blank" rel="noopener noreferrer">YouTube-kanaal</a>.
+             <!-- De YouTube link is hier al ingevuld, controleer of het klopt. Je gebruikte eerder een link met /xregexp, die heb ik hier weggelaten, maar pas aan indien nodig. -->
         </p>
 
-        <!-- *** JOUW CUSTOM FOOTER HIER GEPLAATST *** -->
+        <!-- *** JOUW CUSTOM FOOTER *** -->
         <footer>
-            <!-- Aangepaste tekst om Eddy Foulon correct te positioneren -->
             <p>Originele video door: Eddy Foulon | Diabetes Liga Midden-Limburg</p>
             <p class="social-links">
                 <a href="https://www.dlml.be" target="_blank">
-                    <!-- BELANGRIJK: Upload 'Wereldbol.png' naar GitHub! -->
-                    <img src="Wereldbol.png" alt="Website" class="social-icon">
-                    www.dlml.be
+                    <img src="Wereldbol.png" alt="Website" class="social-icon"> www.dlml.be
                 </a>
                 <a href="https://www.facebook.com/p/Diabetes-Liga-Midden-Limburg-100091325418693/?locale=nl_NL" target="_blank">
-                     <!-- BELANGRIJK: Upload 'Facebook.png' naar GitHub! -->
-                    <img src="Facebook.png" alt="Facebook" class="social-icon">
-                    Facebook
+                    <img src="Facebook.png" alt="Facebook" class="social-icon"> Facebook
                 </a>
                 <a href="https://www.instagram.com/diabetes_liga_midden_limburg/" target="_blank">
-                     <!-- BELANGRIJK: Upload 'Instagram.png' naar GitHub! -->
-                    <img src="Instagram.png" alt="Instagram" class="social-icon">
-                    Instagram
+                    <img src="Instagram.png" alt="Instagram" class="social-icon"> Instagram
                 </a>
                 <a href="https://www.youtube.com/@Diabetesligamiddenlimburg" target="_blank">
-                     <!-- BELANGRIJK: Upload 'YouTube.png' naar GitHub! -->
-                    <img src="YouTube.png" alt="YouTube" class="social-icon">
-                    YouTube
+                    <img src="YouTube.png" alt="YouTube" class="social-icon"> YouTube
                 </a>
             </p>
         </footer>
